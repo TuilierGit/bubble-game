@@ -29,4 +29,28 @@ const bubbleMaker = () => {
   }, 8000);
 };
 
-setInterval(bubbleMaker, 300);
+let game = setInterval(bubbleMaker, 300);
+
+setTimeout(() => {
+  clearInterval(game);
+  const blackScreen = document.createElement("div");
+  const endMenu = document.createElement("div");
+
+  const finalScrore = scoreValue;
+  const content = `
+    <h1>Score : ${finalScrore}</h1>
+    <a href=${window.location.href}>
+      <button>Refaire une partie</button>
+    </a>
+  `;
+
+  counterDisplay.remove();
+
+  document.body.appendChild(blackScreen);
+  blackScreen.appendChild(endMenu);
+
+  endMenu.classList.add("endMenu");
+  blackScreen.classList.add("blackScreen");
+
+  endMenu.innerHTML = content;
+}, 60000);

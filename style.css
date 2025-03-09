@@ -30,3 +30,35 @@ h3 {
     filter: hue-rotate(720deg);
   }
 }
+
+.blackScreen {
+  background: rgba(0, 0, 0, 0.8);
+  width: 110vw;
+  height: 110vh;
+  transform: translate(-5%, -5%);
+  z-index: 50;
+  display: flex;
+}
+
+.endMenu {
+  width: 100vh;
+  height: 80vh;
+  background: white;
+  margin: 10vh 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  border: solid 2px black;
+  border-radius: 50px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.endMenu h1 {
+  font-size: 7rem;
+  position: relative;
+  top: -50px;
+}
