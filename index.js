@@ -1,3 +1,7 @@
+/////////////////////
+//   Les bulles    //
+/////////////////////
+
 const counterDisplay = document.getElementById("score");
 let scoreValue = 0;
 
@@ -29,19 +33,33 @@ const bubbleMaker = () => {
   }, 8000);
 };
 
+/////////////////////
+//    La partie    //
+/////////////////////
+
 let game = setInterval(bubbleMaker, 300);
 
+/////////////////////
+// Le menu de fin  //
+/////////////////////
+
 setTimeout(() => {
+  document.body.style.cursor = "auto";
   clearInterval(game);
   const blackScreen = document.createElement("div");
   const endMenu = document.createElement("div");
 
   const finalScrore = scoreValue;
   const content = `
-    <h1>Score : ${finalScrore}</h1>
-    <a href=${window.location.href}>
-      <button>Refaire une partie</button>
-    </a>
+  <div class="endMenu">
+    <h1>Fin de la partie</h1>
+    <div class="container">
+      <span>Score : ${finalScrore}</span>
+      <a href=${window.location.href}>
+        <button>Refaire une partie</button>
+      </a>
+    </div>
+  </div>
   `;
 
   counterDisplay.remove();

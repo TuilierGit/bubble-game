@@ -1,3 +1,7 @@
+/* ///////////////////// */
+/* //   Les bulles    // */
+/* ///////////////////// */
+
 body {
   overflow: hidden;
   min-height: 100vh;
@@ -31,6 +35,10 @@ h3 {
   }
 }
 
+/* ///////////////////// */
+/* // Le menu de fin  // */
+/* ///////////////////// */
+
 .blackScreen {
   background: rgba(0, 0, 0, 0.8);
   width: 110vw;
@@ -58,7 +66,32 @@ h3 {
 }
 
 .endMenu h1 {
-  font-size: 7rem;
-  position: relative;
-  top: -50px;
+  font-size: 4rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.container span {
+  font-size: 25px;
+}
+
+.container button {
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: 0.5s;
+}
+
+button:hover {
+  font-size: 1.5rem;
+  background: white;
+  color: black;
+  cursor: pointer;
 }
