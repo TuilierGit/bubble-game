@@ -51,7 +51,6 @@ setTimeout(() => {
 
   const finalScrore = scoreValue;
   const content = `
-  <div class="endMenu">
     <h1>Fin de la partie</h1>
     <div class="container">
       <span>Score : ${finalScrore}</span>
@@ -59,7 +58,6 @@ setTimeout(() => {
         <button>Refaire une partie</button>
       </a>
     </div>
-  </div>
   `;
 
   counterDisplay.remove();
@@ -71,4 +69,4 @@ setTimeout(() => {
   blackScreen.classList.add("blackScreen");
 
   endMenu.innerHTML = content;
-}, 60000);
+}, 6000);
