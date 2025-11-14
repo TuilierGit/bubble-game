@@ -69,4 +69,4 @@ setTimeout(() => {
   blackScreen.classList.add("blackScreen");
 
   endMenu.innerHTML = content;
-}, 6000);
+}, 60000);
